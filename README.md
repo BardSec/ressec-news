@@ -2,7 +2,7 @@
 
 A news aggregator for **higher-ed research cybersecurity**. It collects campus cyber incidents, research-security policy (NSPM-33, CUI/CMMC, NIST 800-171, export controls, foreign influence) and research cyberinfrastructure news from 27 sources, filters them for relevance, deduplicates them and shows them in a searchable web page.
 
-Live site: https://ressec-news.pages.dev
+Live site: https://ressec-news.edtechirl.com (also https://ressec.edtechirl.com and https://ressec-news.pages.dev)
 
 Adapted from [k12-cyber-news](../k12-cyber-news) for a higher-ed / research audience.
 
@@ -61,6 +61,8 @@ Available at `http://localhost:30304`.
 - Pages project: `ressec-news`, production branch `main`.
 - GitHub repo secrets: `CLOUDFLARE_API_TOKEN` (Pages edit permission) and `CLOUDFLARE_ACCOUNT_ID`.
 - The workflow runs on push to `main`, every 30 minutes, and on manual dispatch (**Actions → Build & deploy → Run workflow**).
+- Custom domains: `ressec-news.edtechirl.com` and `ressec.edtechirl.com`. Each is a proxied CNAME to `ressec-news.pages.dev` in the edtechirl.com zone, plus a custom domain on the Pages project.
+- **Keepalive:** GitHub disables scheduled workflows in public repos after 60 days with no commits. When the last commit is 25+ days old, the scheduled run pushes an empty `keepalive` commit as `github-actions[bot]`. Run the workflow by hand with **force_keepalive** to test it.
 
 ## API (Docker / local server only)
 
