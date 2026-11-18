@@ -109,6 +109,6 @@ app.get('*', (_req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`ResSec News running on http://localhost:${PORT}`);
+  console.log(`Research Security News running on http://localhost:${PORT}`);
   refreshCache();
 });
