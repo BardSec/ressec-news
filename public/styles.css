@@ -6,8 +6,8 @@
   --surface:     #161b22;
   --surface2:    #21262d;
   --border:      #30363d;
-  --accent:      #a371f7;
-  --accent-glow: rgba(163,113,247,.15);
+  --accent:      #FF8200;
+  --accent-glow: rgba(255,130,0,.15);
   --danger:      #f85149;
   --success:     #3fb950;
   --warning:     #d29922;
@@ -263,7 +263,7 @@ a:hover { text-decoration: underline; }
   letter-spacing: .06em;
   color: var(--accent);
   background: var(--accent-glow);
-  border: 1px solid rgba(88,166,255,.2);
+  border: 1px solid rgba(255,130,0,.2);
   border-radius: 4px;
   padding: 2px 7px;
 }
