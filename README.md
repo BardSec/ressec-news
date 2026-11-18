@@ -73,6 +73,14 @@ Available at `http://localhost:30304`.
 | `GET /api/articles` | Paginated list. Query params: `q`, `source`, `page`, `limit` (max 500) |
 | `GET /api/refresh` | Force a refresh (at most once per minute) |
 
+## Branding (EdTech IRL network)
+
+This site is one of three EdTech IRL news feeds: [K12 Cyber Watch](https://news.edtechirl.com/), [HiEd Cyber News](https://hied-news.edtechirl.com/) and [ResSec News](https://ressec-news.edtechirl.com/). Each has the same top bar and footer linking the three sites and the [EdTech IRL blog](https://www.edtechirl.com/).
+
+- `public/brand/brand.css` is **identical in all three repos**. It sets the light theme, the network bar, the footer and each site's accent colors. Edit it in one repo and copy it to the other two.
+- Each page picks its accent with `<html data-site="k12|hied|ressec">`. Accents: K12 blue `#1D4ED8`, HiEd teal `#0F766E`, ResSec orange `#B45309` for text with `#FF8200` for highlights. The EdTech IRL coral `#FD5353` is used only in the top bar.
+- `public/brand/` also holds the IRL badge (`edtechirl-badge-64.png`, `-180.png`, `favicon-32.png`).
+
 ## Tech stack
 
 - Node.js 20 / Express (local server only)
