@@ -1,0 +1,7 @@
+node_modules/
+.env
+*.log
+sessions.md
+wins.md
+futureplans.md
+dist/

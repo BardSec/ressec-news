@@ -1,0 +1,16 @@
+services:
+  ressec-news:
+    build: .
+    container_name: ressec-news
+    restart: unless-stopped
+    ports:
+      - "30304:30304"
+    environment:
+      - NODE_ENV=production
+      - PORT=30304
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:30304/api/sources"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
