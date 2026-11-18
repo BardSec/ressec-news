@@ -73,6 +73,14 @@ Available at `http://localhost:30304`.
 | `GET /api/articles` | Paginated list. Query params: `q`, `source`, `page`, `limit` (max 500) |
 | `GET /api/refresh` | Force a refresh (at most once per minute) |
 
+## RSS feed
+
+Each build also writes `feed.xml`, an RSS 2.0 feed of the 50 newest articles, at `<site>/feed.xml`. Pages link to it from a `<link rel="alternate">` tag and from the **Subscribe** card in the sidebar.
+
+- Site name, description and URL for the feed come from `site.json`.
+- `lib/feed.js` is identical in all three news repos.
+- The feed exists only in the static build (`npm run build`), not in the local Express server.
+
 ## Branding (EdTech IRL network)
 
 This site is one of three EdTech IRL news feeds: [K12 Cyber Watch](https://news.edtechirl.com/), [HiEd Cyber News](https://hied-news.edtechirl.com/) and [ResSec News](https://ressec-news.edtechirl.com/). Each has the same top bar and footer linking the three sites and the [EdTech IRL blog](https://www.edtechirl.com/).
